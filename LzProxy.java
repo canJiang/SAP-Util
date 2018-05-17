@@ -1,5 +1,3 @@
-package com.dongpeng.oa.hr.workflow.getLZ;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,14 +24,14 @@ public class LzProxy extends CommonBapiProxyEx {
 		input.setValue(mainMap.get("SQRGH"), "P_PERNR");
 		input.setValue(mainMap.get("SJLZRQ"), "P_DATE");
 		input.setValue(lzMap.get(mainMap.get("LZYY")), "P_MASSG");
-		input.setValue(mainMap.get("LZYY1"), "P_ZZ_LZYY");//ÀëÖ°Ô­Òò-1
-		input.setValue(mainMap.get("LZYY2"), "P_ZZ_LZYY_3");//ÀëÖ°Ô­Òò-2
-		input.setValue(mainMap.get("LZYY3"), "P_ZZ_LZYY_4");//ÀëÖ°Ô­Òò-3
-		input.setValue(mainMap.get("LZYGJY"), "P_ZZ_LZJY");//ÀëÖ°Õß¶Ô¹«Ë¾½¨Òé
-		input.setValue(mainMap.get("BZ"), "P_ZZ_BZ");//±¸×¢
-		input.setValue(hrmSapCode, "P_ZZ_MTR");//ÀëÖ°ÃæÌ¸ÈË
+		input.setValue(mainMap.get("LZYY1"), "P_ZZ_LZYY");//ç¦»èŒåŸå› -1
+		input.setValue(mainMap.get("LZYY2"), "P_ZZ_LZYY_3");//ç¦»èŒåŸå› -2
+		input.setValue(mainMap.get("LZYY3"), "P_ZZ_LZYY_4");//ç¦»èŒåŸå› -3
+		input.setValue(mainMap.get("LZYGJY"), "P_ZZ_LZJY");//ç¦»èŒè€…å¯¹å…¬å¸å»ºè®®
+		input.setValue(mainMap.get("BZ"), "P_ZZ_BZ");//å¤‡æ³¨
+		input.setValue(hrmSapCode, "P_ZZ_MTR");//ç¦»èŒé¢è°ˆäºº
 
-		// Ö´ĞĞBAPI
+		// æ‰§è¡ŒBAPI
 		sapConnection.execute(function);
 
 		JCO.ParameterList output = function.getExportParameterList();
